@@ -1,3 +1,5 @@
 opencv-python
-mediapipe
+mediapipe>=0.10.0
 pyautogui
+customtkinter
+pillow

@@ -1,73 +1,67 @@
-# Eye Control Mouse
-Cyber Samuarai Version 2026
+# Eye Control Mouse v2 Pro 👁️🖱️
 
-This Python script utilizes computer vision to create an eye-tracking mouse control system. The script uses the MediaPipe library for face mesh detection and PyAutoGUI for mouse control.
+A powerful Python application that utilizes computer vision to track eye gaze and head movement, allowing full hands-free mouse control with interactive calibration and customizable settings.
 
-## Setup
+---
 
-### Prerequisites
+## 🌟 Key Features
 
-- Python 3.x
-- OpenCV
-- MediaPipe
-- PyAutoGUI
+- **🎯 Interactive 9-Point Calibration System**:
+  Full-screen calibration wizard that maps your head and eye movement range directly to your display screen, making it effortless to reach every corner.
 
-### Installation
+- **🎛️ Head vs. Eye Movement Ratio Control**:
+  Adjust the blend factor between head translation and iris movement (0% Head / 100% Eye up to 100% Head / 0% Eye).
 
-1. Install the required dependencies:
+- **⚡ Independent X & Y Sensitivity Gains**:
+  Fine-tune horizontal ($X$) and vertical ($Y$) multipliers so cursor movement comfortably matches your setup.
 
-    ```bash
-    pip install opencv-python mediapipe pyautogui
-    ```
+- **🎯 Advanced Smoothing & Tremor Deadzone**:
+  Exponential filtering and deadzone thresholds eliminate micro-shakes when holding your gaze statically.
 
-2. Clone the repository:
+- **👆 Blink Click Detection**:
+  Automatic click trigger on eye blinks with customizable threshold and safety cooldown.
 
-    ```bash
-    git clone https://github.com/bazzofx/eye-tracker-mousev2.git
-    cd eye-tracker-mousev2
-    ```
+- **🖥️ Modern CustomTkinter GUI**:
+  Dark-themed desktop app featuring live webcam preview, real-time tracking badges, sliders, toggles, and master ON/OFF switch.
 
-## Usage
+---
 
-1. Run the script:
+## 🛠️ Installation & Setup
 
-    ```bash
-    python main.py
-    ```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/bazzofx/eye-tracker-mousev2.git
+   cd eye-tracker-mousev2
+   ```
 
-2. Adjust the camera to have a clear view of your face.
+2. **Install requirements**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Move your eyes to control the mouse cursor.
+3. **Run the application**:
+   ```bash
+   python main.py
+   ```
 
-4. Blink both eyes simultaneously to perform a click.
+---
 
-## Features
+## 🎯 How to Calibrate
 
-- Real-time eye tracking for mouse control.
-- Blink detection for mouse clicks.
-- Dynamic adjustment of mouse sensitivity based on eye movement.
-- On-screen visualization of eye and click points.
+1. Click **"🎯 Start 9-Point Full Calibration"** in the app.
+2. A full-screen window will appear.
+3. Look directly at each glowing red dot as it moves across the 9 grid points of your screen.
+4. Once completed, the app automatically calculates your personal movement boundaries and saves them to `config.json`.
 
-## Customization
+---
 
-- Modify the `screen_x` and `screen_y` variables to adjust the initial mouse cursor position.
-- Adjust the sensitivity factor in the mouse movement calculations for personalized control.
+## 📜 Configuration (`config.json`)
 
-## Known Issues
-
-- The script may require fine-tuning for different lighting conditions.
-- Blink detection sensitivity may need adjustment based on individual user behavior.
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and submit a pull request.
-
-
-## Acknowledgments
-
-- The script uses the [MediaPipe](https://mediapipe.dev/) library for face mesh detection.
-- [PyAutoGUI](https://pyautogui.readthedocs.io/) is used for mouse control.
-
-Feel free to customize the README file further based on your project's specific details and requirements.
+Settings are saved persistently in `config.json` and can also be adjusted via the UI sliders:
+- `x_sensitivity`: Multiplier for horizontal cursor motion.
+- `y_sensitivity`: Multiplier for vertical cursor motion.
+- `head_eye_ratio`: Balance between head movement and eye gaze tracking.
+- `smoothing`: Interpolation factor for cursor motion smoothness.
+- `deadzone`: Tremor cancellation threshold.
+- `blink_threshold`: Sensitivity for blink click detection.
+- `mouse_control_enabled`: Toggle physical mouse cursor movement.

@@ -1,0 +1,20 @@
+{
+    "x_sensitivity": 2.425,
+    "y_sensitivity": 1.8,
+    "head_eye_ratio": 0.63,
+    "smoothing": 0.373,
+    "deadzone": 0.0021999999999999997,
+    "blink_threshold": 0.005,
+    "blink_cooldown": 0.8,
+    "blink_enabled": true,
+    "mouse_control_enabled": false,
+    "draw_landmarks": true,
+    "calibration": {
+        "is_calibrated": false,
+        "raw_x_min": 0.3,
+        "raw_x_max": 0.7,
+        "raw_y_min": 0.3,
+        "raw_y_max": 0.7,
+        "points": []
+    }
+}
