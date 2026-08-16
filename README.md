@@ -1,4 +1,5 @@
 # Eye Control Mouse
+Cyber Samuarai Version 2026
 
 This Python script utilizes computer vision to create an eye-tracking mouse control system. The script uses the MediaPipe library for face mesh detection and PyAutoGUI for mouse control.
 
@@ -22,8 +23,8 @@ This Python script utilizes computer vision to create an eye-tracking mouse cont
 2. Clone the repository:
 
     ```bash
-    git clone https://github.com/rajiv2004-cloud/Eye-Control-Mouse.git
-    cd eye-control-mouse
+    git clone https://github.com/bazzofx/eye-tracker-mousev2.git
+    cd eye-tracker-mousev2
     ```
 
 ## Usage
@@ -31,7 +32,7 @@ This Python script utilizes computer vision to create an eye-tracking mouse cont
 1. Run the script:
 
     ```bash
-    python eye_control_mouse.py
+    python main.py
     ```
 
 2. Adjust the camera to have a clear view of your face.
